@@ -1,16 +1,7 @@
-example_project
+Woromedia-take_home_assignment
 ===============
 
-An example project demonstrating the power of `django-rest-authemail`.
-
-
-Features
---------
-
-- Easy to set up.
-- Can be used to test `django-rest-authemail`.
-- Demonstrates how to use `django-rest-authemail`.
-- Can be extended to React and AngularJS front end clients and iOS/Android mobile apps.
+The project provides user authentication for users with email verification using the django-rest-auth email package (internally uses Django rest framework) and also using Google OAuth. A simple frontend has been designed to show the following functionalities.
 
 
 Installation
@@ -18,28 +9,10 @@ Installation
 
 Create a virtual environment and activate it.
 
-```python
-virtualenv -p /usr/local/bin/python3.7 ~/.virtualenvs/example_project-3.7
-source ~/.virtualenvs/example_project-3.7/bin/activate
-```
-
-Clone the `django-rest-authemail` repo.
+Clone the repo.
 
 ```python
-git clone https://github.com/celiao/django-rest-authemail.git
-```
-
-All you need is the `example_project` directory, so extract `example_project` and delete the other files and directories.
-
-```
-mv django-rest-authemail/example_project .
-rm -rf django-rest-authemail
-```
-
-Change into the `example_project` directory.
-
-```
-cd example_project
+git clone https://github.com/Shriramu2002/woromedia-take_home_assignment.git
 ```
 
 Install the required packages into your virtual environment.
@@ -51,7 +24,7 @@ pip install -r requirements.txt
 Either add your email settings to your environment or enter them directly at the bottom of the `settings.py` file.  The setting `AUTH_EMAIL_VERIFICATION` (default: True) can be set to False, if you don't want email verification to be performed.
 
 ```python
-vim example_project/settings.py
+vim wmtha_project/settings.py
 ```
 
 Create the database tables with Django's `migrate` and create a superuser with `createsuperuser`.
@@ -61,28 +34,13 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-Usage
------
-
-Test `django-rest-authemail`.  There shouldn't be any failures, but if there are, try to address them (most likely in your email settings).  Go onto the next step for more clues, if you get stuck.
-
-```python
-python manage.py test authemail
-```
-
 Check your setup by starting a Web server on your local machine.
 
 ```python
 python manage.py runserver
 ```
 
-Direct your browser to the `Django /admin` interface, and log in.  You should see `Users`, `Verified Users`, `Tokens`, `Password reset codes`, `Signup codes`, and `Groups`.  If you click on `Users`, you should see your superuser account.
-
-```python
-http://127.0.0.1:8000/admin
-```
-
-Begin the playing with `django-rest-authemail` by going to the `/landing` page.
+Begin by going to the `/landing` page.
 
 ```python
 http://127.0.0.1:8000/landing
@@ -112,8 +70,4 @@ Login with your credentials.  Go back to the `Django /admin` and click on `Token
 
 Go back to your `Home` page and click on the `Logout` button.  You will be returned to the `/landing` page.
 
-Click on the `Login` link and check out the `Forgot Password` functionality.
-
-Login and check out the `Change Email`, `Change Password`, and `Change Me`  functionality.  Logout and log in again to confirm that your password has been changed.
-
-Enter incorrect email addresses and passwords to exercise the error messages.
+You can also log in using your Google account both on the signup and login page. It has been implemented by using django-allauth library.
