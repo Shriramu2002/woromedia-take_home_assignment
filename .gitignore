@@ -1,0 +1,4 @@
+shenv/
+db.sqlite3
+accounts/migration/
+accounts/__pycache__
