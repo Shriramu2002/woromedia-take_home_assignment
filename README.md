@@ -1,7 +1,7 @@
 Woromedia-take_home_assignment
 ===============
 
-The project provides user authentication for users with email verification using the django-rest-auth email package (internally uses Django rest framework) and also using Google OAuth. A simple frontend has been designed to show the following functionalities.
+The project provides user authentication for users with email verification using the django-rest-authemail package (internally uses Django rest framework) and also using Google OAuth. A simple frontend has been designed to show the following functionalities. The django-rest-authemail api guide which inculdes endpoints, response, requests, etc is [here](https://www.django-rest-framework.org/api-guide/authentication/).
 
 
 Installation
