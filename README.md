@@ -21,7 +21,8 @@ Install the required packages into your virtual environment.
 pip install -r requirements.txt
 ```
 
-Either add your email settings to your environment or enter them directly at the bottom of the `settings.py` file.  The setting `AUTH_EMAIL_VERIFICATION` (default: True) can be set to False, if you don't want email verification to be performed.
+Either add your email settings to your environment or enter them directly at the bottom of the `settings.py` file.  The setting `AUTH_EMAIL_VERIFICATION` (default: True) can be set to False, if you don't want email verification to be performed. Also, update the `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` fields to relevant values.
+
 
 ```python
 vim wmtha_project/settings.py
